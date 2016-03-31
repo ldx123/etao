@@ -1,0 +1,59 @@
+.g-item {
+  float: left;
+  width: 228px;
+  height: 760px;
+  position: relative;
+}
+.hp-fix {
+  width: 230px;
+  height: 760px;
+}
+.fix {
+  position: fixed;
+  top: 0;
+}
+.item-wrap {
+  width: 230px;
+  z-index: 5;
+  -webkit-transform: translateZ(0);
+}
+.item-nav {
+  background-color: #fff;
+  margin-top: 10px;
+  border: 1px solid #DEDEDE;
+}
+.m-item {
+  padding: 10px 18px;
+}
+.m-item h1 {
+  font-size: 16px;
+  color: #101010;
+  font-family: '微软雅黑';
+}
+.m-item .sider-item {
+  line-height: 27px;
+  margin-bottom: 20px;
+}
+.m-item p a {
+  float: left;
+  font-size: 14px;
+  color: #666;
+  font-family: '微软雅黑';
+  white-space: nowrap;
+  margin-right: 18px;
+}
+.m-item p a:hover {
+  color: #F60;
+}
+.m-item .on {
+  color: #F60;
+}
+.banner-ad {
+  margin-top: 10px;
+  border: 1px solid #DEDEDE;
+}
+.banner-ad .banner {
+  display: block;
+  width: 228px;
+  margin-left: -1px;
+}

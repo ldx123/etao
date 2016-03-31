@@ -1,0 +1,116 @@
+.m-top-banner a {
+  display: block;
+  height: 50px;
+  overflow: hidden;
+}
+@media (max-width: 1219px) {
+  .top-new-banner a {
+    width: 990px;
+  }
+  .top-new-banner a img {
+    margin-left: -210px;
+  }
+}
+@media (max-width: 1009px) {
+  .top-new-banner a {
+    width: 750px;
+  }
+  .top-new-banner a img {
+    display: none;
+  }
+}
+nav {
+  width: 100%;
+  height: 40px;
+  background: #F8F8F8 ;
+  font-size: 14px;
+  font-family: '微软雅黑';
+  border-bottom: 1px solid #EBEBEB;
+}
+nav ul {
+  padding: 0 25px;
+}
+nav li {
+  float: left;
+  padding-right: 30px;
+  line-height: 40px;
+}
+nav .new-icon {
+  background: url(../img/new-icon.png) 30px 7px no-repeat;
+}
+nav .phone {
+  z-index: 1;
+  display: block;
+  height: 39px;
+  padding: 0 40px 0 15px;
+  border: 1px solid #EBEBEB;
+  position: relative;
+}
+nav .phone .code-small {
+  position: absolute;
+  top: 13px;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  display: inline-block;
+  background: url(../img/icon.png) 0 -76px no-repeat;
+}
+nav .phone .QRcode {
+  display: none;
+  position: absolute;
+  top: 40px;
+  left: -1px;
+  padding: 10px;
+  text-align: center;
+  line-height: 20px;
+}
+nav .z-get {
+  background-color: #fff;
+}
+.m-header {
+  height: 87px;
+  padding: 0px 25px;
+  background-color: #fff;
+}
+.search {
+  float: left;
+  margin-top: 25px;
+  width: 490px;
+  height: 38px;
+  position: relative;
+  border: 1px solid #D4D4D4;
+}
+.search .text {
+  width: 80%;
+  line-height: 18px;
+  height: 18px;
+  padding: 9px;
+  font-size: 14px;
+  color: #919191;
+}
+.search .btn-search {
+  position: absolute;
+  right: 0;
+  width: 45px;
+  height: 38px;
+  background: #377bee url(../img/icon.png) 0 -4px no-repeat;
+  cursor: pointer;
+}
+.logo {
+  float: left;
+  width: 307px;
+  margin-top: 25px;
+  display: block;
+  height: 35px;
+  background: url(../img/logo-icon.png) 0 -10px no-repeat;
+}
+.login {
+  margin-top: 25px;
+  float: right;
+}
+.login a {
+  margin-left: 20px;
+  font-size: 14px;
+  font-family: '微软雅黑';
+  color: #666;
+}

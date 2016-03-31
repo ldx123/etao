@@ -1,0 +1,1033 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>一淘</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+     <script src="js/jquery-1.9.0.js"></script>
+     <script src="js/js.js"></script>
+     <script>
+        $(function(){
+            var toph=$(".item-wrap").offset().top,
+                foot=$(".g-footer").offset().top,
+                H=$(".item-wrap").height();
+                // alert(foot-H);
+                // alert(H);
+                // alert(foot);
+            $(window).on('scroll',function(){
+                if($(window).scrollTop()>toph){
+                    $(".item-wrap").addClass("fix");
+                    $(".scroll").addClass("scroll-fix");
+                    }else{
+                    $(".item-wrap").removeClass("fix");
+                    $(".scroll").removeClass("scroll-fix");
+                    }
+                    if($(window).scrollTop()>(foot-H)){
+                    $(".item-wrap").css({top:foot-H-235,position:"absolute"});
+                    }else{
+                    $(".item-wrap").css({top:'',position:''});
+                }          
+            });
+        });
+     </script>
+     <!--[if IE]>
+    <script>
+    (function(){if(!/*@cc_on!@*/0)return;var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i])}})()
+    </script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrap">
+        <!-- 头部 -->
+        <header>
+            <div class="m-top-banner">
+                <a href=""><img src="img/top-banner.png" alt=""></a>
+            </div> 
+            <nav class="clearfix" >
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">海淘</a></li>
+                    <li><a href="">小栈</a></li>
+                    <li class="new-icon"><a href="">特卖</a></li>
+                    <li><a href="">必买清单</a></li>
+                    <li  class="phone"><a href="" >手机一淘<i class="code-small"></i><div class="QRcode"><img src="img/code.png">手机购买</div></a></li>
+                </ul>
+                <script>
+                    $(document).ready(function(){
+                      $(".QRcode").hide(); 
+                      $(".phone").hover(
+                      function () {
+                        $(".QRcode").show();
+                        $(this).addClass('z-get');
+                      },
+                      function () {
+                        $(".QRcode").hide();
+                         $(this).removeClass('z-get');
+                      } );
+                    });
+                </script>
+            </nav>
+            <div class="m-header clearfix">
+                 <a href="" class="logo"></a>
+                 <div class="search">
+                     <input class="text" type="text" value="买什么，问一淘" />
+                     <input class="btn-search" type="submit" value=""/>
+                 </div>
+                 <div class="login">
+                     <a href="">注册</a><a href="">登录<i class="iconfont">&#xe608;</i></a>
+                 </div>
+            </div> 
+        </header>
+        <!-- end头部 -->
+        <!-- 内容 -->
+        <div class="m-content clearfix">
+            <!-- 侧边栏 左-->
+            <aside class="g-item">
+             <!-- <div class="hp-fix"></div> -->
+              <div class="item-wrap">
+                 <div class="item-nav"> 
+                    <ul class="m-item">
+                        <li class="sider-item">
+                            <h1>特色推荐</h1>
+                            <p class="clearfix">
+                                <a href=""  class="on">一淘特卖</a>
+                                <a href="" >海外官网直送</a>
+                                <a href="" >海外优惠速递</a>
+                                <a href="" >优惠爆料</a>  
+                            </p>
+                        </li>
+                        <li class="sider-item">
+                            <h1>兴趣小栈</h1>
+                            <p class="clearfix">
+                                <a href="" >薅羊毛</a>
+                                <a href="" >玩车一族</a>
+                                <a href="" >围城烦恼</a>
+                                <a href="" >靓妈童萌</a>  
+                                <a href="" >海淘大杂院</a>  
+                                <a href="" >查看全部</a>  
+                            </p>
+                        </li>
+                        <li class="sider-item">
+                            <h1>好货分类</h1>
+                            <p class="clearfix">
+                                <a href="" >母婴用品</a>
+                                <a href="" >美容护肤</a>
+                                <a href="" >数码家电</a>
+                                <a href="" >营养保健</a>  
+                                <a href="" >好货必买清单</a>  
+                              
+                            </p>
+                        </li>
+                    </ul>
+                  </div>
+                <div class="banner-ad">
+                 <a href=""><img class="banner" src="img/banner1.jpg" alt=""></a>
+                </div>
+              </div>
+            </aside>
+            <!-- end侧边栏 左-->
+            <!-- 主体内容 -->
+            <section>
+                <div class="m-main">
+                    <div class="title clearfix">
+                        <ul class="main-items">
+                             <li><a href="">今日推荐</a></li>
+                             <li><a href="">海淘</a></li>
+                             <li><a href="">9.9</a></li>
+                        </ul>
+                        <div class="feed-search search-in">
+                            <!--   <input  type="text"> -->
+                            <div class="search-icon">
+                                <i class="search-close"></i>
+                                <i class="iconfont search-go">&#xe606;</i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <!-- 今日推荐 -->
+                        <div class="g-content">
+                            <div class="content-items clearfix">
+                               <div class="title-item clearfix">
+                                <ul class="con-item scroll">
+                                    <li class="cur"><a class="on" href="">全部</a></li>
+                                    <li><a href="">热门</a></li>
+                                    <li><a href="">海淘</a></li>
+                                    <li><a href="">淘宝/天猫</a></li>
+                                    <li><a href="">B2C</a></li>
+                                    <li><a href="">白菜</a></li>
+                                    <li><a href="">男装/女装</a></li>
+                                    <li><a href="">童装/母婴</a></li>
+                                    <li><a href="">食品/家居</a></li>
+                                    <li><a href="">鞋包/饰品</a></li>
+                                    <li><a href="">数码/家电</a></li>
+                                    <li><a href="">美容/护肤</a></li>
+                                    <li><a href="">运动/户外</a></li>
+                                </ul>
+                                <a class="btn-baoliao" href="">
+                                    <em class="baoliao-title">我要爆料</em>
+                                    <span class="baoliao-sub">采用后奖励3-10元现金</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="com m-hot">
+                                <h3>
+                                <a href="" >【<span>签到抽奖</span>】<strong class="feed-title-em">签到福利大放送：赢便携无线路由器、淘公仔奖品</strong></a>
+                                </h3>
+                            </div>
+                            <div class="com m-content">
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con1.png" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-page">
+                                    <div class="page">
+                                        <a class="on" href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">...</a>
+                                        <a href="">下一页<i class="iconfont">&#xe611;</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         <!-- end今日推荐 -->
+                         <!-- 海淘 -->
+                        <div class="g-content">
+                            <div class="content-items clearfix">
+                               <div class="title-item clearfix">
+                                <ul class="con-item scroll">
+                                    <li class="cur"><a class="on" href="">全部2</a></li>
+                                    <li><a href="">热门2</a></li>
+                                    <li><a href="">海淘2</a></li>
+                                    <li><a href="">淘宝/天猫2</a></li>
+                                    <li><a href="">B2C2</a></li>
+                                    <li><a href="">白菜2</a></li>
+                                    <li><a href="">男装/女装2</a></li>
+                                    <li><a href="">童装/母婴2</a></li>
+                                    <li><a href="">食品/家居2</a></li>
+                                    <li><a href="">鞋包/饰品2</a></li>
+                                </ul>
+                                <a class="btn-baoliao" href="">
+                                    <em class="baoliao-title">我要爆料</em>
+                                    <span class="baoliao-sub">采用后奖励3-10元现金</span>
+                                </a>
+                              </div>
+                            </div>
+                            <div class="com m-hot">
+                                <h3>
+                                <a href="" >【<span>签到抽奖</span>】<strong class="feed-title-em">签到福利大放送：赢便携无线路由器、淘公仔奖品</strong></a>
+                                </h3>
+                            </div>
+                            <div class="com m-content">
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list">
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a  href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content-list" >
+                                    <div class="content clearfix">
+                                        <div class="z-text">
+                                            <div class="con-title"><a href="">【白菜价】4月27日白菜商品汇总  </a></div>
+                                            <p>
+                                                白菜价栏目推荐都是来自大家的爆料，亲们有好料一定要积极爆料分享哦。可以在一淘首页右上角点击“我要爆料”，也可以在薅羊毛小站右上角点击“爆料”，优惠信息爆料奖励300~1000集分宝，采纳的爆料先推广，再核对再发放奖金，被采纳的小伙伴们不要着急哦
+                                            </p>
+                                        </div>
+                                        <a class="z-img" href=""><img src="img/con2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="info clearfix">
+                                        <div class="author">
+                                            <span >作者:<a href="">etao白菜价</a></span>
+                                            <span class="info-time">04-27 08:00</span>
+                                        </div>
+                                        <div class="share">
+                                              <a class="feed-like feed-btn" href="">
+                                              <i class="zan-icon iconfont">&#xe610;</i>&nbsp;赞&nbsp;252</a>            
+                                              <a class="feed-btn feed-comment" href="">评论&nbsp;75</a>
+                                              <a href="" >分享</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="m-page">
+                                    <div class="page">
+                                        <a class="on" href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">...</a>
+                                        <a href="">下一页<i class="iconfont">&#xe611;</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end海淘 -->
+                        <!-- 特价9.9 -->
+                        <div class="g-content" >
+                            <div class="content-items item3">
+                               <div class="title-item clearfix">
+                                <ul class="con-item">
+                                    <li class="cur"><a class="on" href="">全部3</a></li>
+                                    <li><a href="">热门3</a></li>
+                                    <li><a href="">海淘3</a></li>
+                                    <li><a href="">淘宝/天猫3</a></li>
+                                    <li><a href="">B2C3</a></li>
+                                    <li><a href="">白菜3</a></li> 
+                                </ul>
+                              </div>
+                            </div>
+                            <ul class="cp-item-list clearfix">
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic4.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic1.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic2.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li class="cp-item">
+                                    <div class="item-img">
+                                        <a href=""><img src="img/pic3.jpg" alt=""></a>
+                                    </div>
+                                    <div class="item-spec">月销量1234件</div>
+                                    <div class="item-tit">海备思高清VGA线3+9电脑连接显示器电视投影仪视频线连接线5/10米</div>
+                                    <div class="now-price clearfix">
+                                        <span class="price">&nbsp;¥<em>9.9</em></span>
+                                        <span class="discount" >3.2折</span>
+                                    </div>
+                                </li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <div class="com m-content">
+                                <div class="m-page">
+                                    <div class="page">
+                                        <a class="on" href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">...</a>
+                                        <a href="">下一页<i class="iconfont">&#xe611;</i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end特价9.9 -->        
+                    </div>
+                </div>   
+            </section>
+            <!-- end主体内容 -->
+            <!-- 侧边栏 右-->
+            <aside class="g-sider">
+                <div class="m-side mod">
+                    <a class="sign-img" href=""></a>
+                    <div class="sign-show"><div></div></div>
+                    <div  class="sign-in" >
+                         <div class="ci_receive">签到<s class="ci_icon"></s></div>
+                    </div>
+                    <div class="time" >0点 / 7点 / 15点<br>三个时段发放更多淘金币</div>
+                </div>
+                <div class="banner-slider mod">
+                    <div class="bann">
+                       <ul class="banner-img">
+                           <li><a href=""><img src="img/banner-side1.jpg" alt=""></a></li>
+                           <li><a href=""><img src="img/banner-side2.jpg" alt=""></a></li>
+                           <li><a href=""><img src="img/banner-side3.png" alt=""></a></li>
+                       </ul>
+                        <div class="z-btn">
+                            <span class="banner-tips">
+                            <i class="current-banner"></i>/<i class="J_TotalBanner"></i>
+                            </span>
+                            <a class="iconfont banner-slider-trigger banner-slider-prev" title="上一页">&#xe60a;</a>
+                            <a class="iconfont banner-slider-trigger banner-slider-next" title="下一页">&#xe60e;</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-slider mod">
+                    <div class="m-intro">
+                      <div class="intro">
+                          <a href=""><img src="img/banner-side5.png" alt=""></a>
+                      </div>
+                      <ul class="intro-hd">
+                          <li><a href="">爆料采用奖励300-1000集分宝</a></li>
+                          <li><a href="">每日理财播报 省钱赚钱理财</a></li>
+                          <li><a href="">新鲜数码试用 败家男研究会</a></li>
+                      </ul>
+                  </div>
+                </div>
+                <div class="banner-slider mod">
+                    <div class="tit clearfix">
+                        <h2><span class="ir">小栈好贴</span></h2>
+                        <a class="" href="" >更多</a>
+                    </div>
+                     <ul class="we-detail">
+                        <li class="clearfix">
+                            <div class="we-image"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >每日超值优惠信息 尽在：</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">薅羊毛小栈</a></p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="we-image"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >每日超值优惠信息 尽在：</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">薅羊毛小栈</a></p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="we-image"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >每日超值优惠信息 尽在：</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">薅羊毛小栈</a></p>
+                            </div>
+                        </li>              
+                     </ul>
+                </div>
+
+                <div class="banner-slider mod">
+                    <div class="tit clearfix">
+                        <h2><span class="ir">薅羊毛达人</span></h2>
+                        <a class="" href="" >更多</a>
+                    </div>
+                     <ul class="we-detail">
+                        <li class="clearfix">
+                            <div class="we-image dise"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >美妆馆</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">白兔和小红帽总管</a></p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="we-image dise"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >美妆馆</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">白兔和小红帽总管</a></p>
+                            </div>
+                        </li>
+                        <li class="clearfix">
+                            <div class="we-image dise"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >美妆馆</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">白兔和小红帽总管</a></p>
+                            </div>
+                        </li> 
+                        <li class="clearfix">
+                            <div class="we-image dise"><a href=""><img src="img/header1.jpg"></a></div>
+                            <div class="we-info">
+                                <p><a class="we-link" href="" >美妆馆</a></p>
+                                <p class="w-t-src"><a class="we-user" href="">白兔和小红帽总管</a></p>
+                            </div>
+                        </li> 
+                     </ul>
+                </div>
+
+                <div class="banner-slider mod">
+                   <ul>
+                       <li><a href=""><img src="img/banner-side3.png" alt=""></a></li>
+                       
+                   </ul>
+                </div>
+                <div class="banner-slider mod">
+                    <a href=""><img src="img/banner-side4.png" alt=""></a>
+                </div>
+            </aside>
+            <!-- end侧边栏 右-->
+        </div> 
+        <!-- end内容  -->
+    </div> 
+    <!-- 底部 -->
+    <footer>
+        <div class="g-footer">
+            <div class="m-foot">
+                <div class="foot-list clearfix">
+                    <dl class="footer-item"> 
+                        <dt>关于我们</dt> 
+                        <dd><a href="" >关于一淘</a></dd> 
+                        <dd><a href="" >免责声明</a></dd> 
+                        <dd><a href="" >诚聘英才</a></dd> 
+                     </dl>   
+                    <dl class="footer-item"> 
+                        <dt>帮助中心</dt> 
+                        <dd><a href="" >新手指南</a></dd> 
+                        <dd><a href="">智能客服</a></dd> 
+                        <dd><a href="" >廉政邮箱</a></dd> 
+                    </dl>  
+                    <dl class="footer-item"> 
+                        <dt>手机一淘</dt>
+                        <dd><a class="scan" href=""><img src="img/foot.png"></a></dd> 
+                    </dl>  
+                    <dl class="footer-item"> 
+                        <dt>精选频道</dt> 
+                        <dd><a href="" >一淘特卖</a></dd> 
+                        <dd><a href="">海淘代购</a></dd> 
+                        <dd><a href="">优惠推荐</a></dd> 
+                    </dl> 
+                    <dl class="footer-item last"> 
+                        <dt>网站地图</dt> 
+                        <dd><a href="">必买清单</a></dd> 
+                        <dd><a href="">热门商品</a></dd> 
+                        <dd><a href="">小栈精选</a></dd> 
+                    </dl> 
+                </div> 
+                <div class="m-link"> 
+                    <div class="link-list"> 
+                        <a  href="">阿里巴巴集团</a> 
+                        <a  href="">淘宝网</a>
+                        <a  href="">天猫</a>
+                        <a  href="">聚划算</a>
+                        <a  href="">全球速卖通</a>
+                        <a  href="">阿里巴巴国际交易市场</a>
+                        <a  href="">1688</a>
+                        <a  href="">阿里妈妈</a>
+                        <a  href="">阿里旅行·去啊</a>
+                        <a  href="">阿里云计算</a>
+                        <a  href="">YunOS</a>
+                        <a  href="">阿里通信</a>
+                        <a  href="">万网</a>
+                        <a  href="">高德</a>
+                        <a  href="">优视</a>
+                        <a  href="">友盟</a>
+                        <a  href="">酷盘</a>
+                        <a  href="">虾米</a>
+                        <a  href="">天天动听</a>
+                        <a  href="">来往</a>
+                        <a  href="">钉钉</a>
+                        <a  href="">11 Main</a>
+                        <a  href="">支付宝</a>
+                    </div>
+                <div class="copyright">Copyright&nbsp;&#169;&nbsp;2010-2015&nbsp;ETAO.COM&nbsp;版权所有</div>
+                <p>增值电信业务经营许可证：浙B2-20080224</p>
+            </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end底部 -->
+
+</body>
+</html>
